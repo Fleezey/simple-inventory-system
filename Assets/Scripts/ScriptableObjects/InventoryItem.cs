@@ -17,5 +17,13 @@ namespace Game.Inventory
         public string Name => itemName;
         public string Description => itemDescription;
         public GameObject Prefab => itemPrefab;
+
+
+        public static InventoryItem CreateParameterizedInstance(string name = "", string description = "")
+        {
+            var data = CreateInstance<InventoryItem>();
+            data.itemName = "";
+            return data;
+        }
     }
 }
